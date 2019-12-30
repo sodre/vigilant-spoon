@@ -1,9 +1,9 @@
 [run]
-source = {{ cookiecutter.project_namespace }}
+source = sodre
 
 [report]
 omit =
     setup.py
-    {{ cookiecutter.project_namespace }}/{{ cookiecutter.project_slug }}/__main__.py
-    {{ cookiecutter.project_namespace }}/{{ cookiecutter.project_slug }}/_version.py
+    sodre/vigilant_spoon/__main__.py
+    sodre/vigilant_spoon/_version.py
     tests/*
