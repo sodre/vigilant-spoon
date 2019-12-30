@@ -13,18 +13,10 @@ codacy:
 cookiecutter:
   #
   # TODO: Please pick one, e.g. command_line_interface: Click
-  command_line_interface:
-    - Click
-    - None
+  command_line_interface: Click
   #
   # TODO: Please pick one, e.g. open_source_license: MIT
-  open_source_license:
-    - MIT
-    - BSD
-    - ISC
-    - Apache
-    - GNUv3
-    - Proprietary
+  open_source_license: MIT
 
   #
   # These were guess based on the repository information
