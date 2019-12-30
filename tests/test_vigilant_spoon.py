@@ -4,7 +4,7 @@
 
 import pytest
 from click.testing import CliRunner
-from sodre.vigilant_spoon import cli
+from zeroae.vigilant_spoon import cli
 
 
 @pytest.fixture
