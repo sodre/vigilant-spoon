@@ -13,7 +13,7 @@ codacy:
 cookiecutter:
   #
   # TODO: Please pick one, e.g. command_line_interface: Click
-  command_line_interface: Click
+  command_line_interface: None
   #
   # TODO: Please pick one, e.g. open_source_license: MIT
   open_source_license: MIT
