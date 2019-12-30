@@ -1,9 +1,9 @@
 [run]
-source = sodre
+source = zeroae
 
 [report]
 omit =
     setup.py
-    sodre/vigilant_spoon/__main__.py
-    sodre/vigilant_spoon/_version.py
+    zeroae/vigilant_spoon/__main__.py
+    zeroae/vigilant_spoon/_version.py
     tests/*

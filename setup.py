@@ -41,7 +41,7 @@ conda_rosetta_stone = {
 setup_kwargs = dict(
     author="Patrick Sodré",
     author_email="psodre@gmail.com",
-    use_scm_version={"write_to": "sodre/vigilant_spoon/_version.py"},
+    use_scm_version={"write_to": "zeroae/vigilant_spoon/_version.py"},
     python_requires=">=3.6",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
@@ -56,8 +56,8 @@ setup_kwargs = dict(
     description="A Spork",
     # fmt: off
     entry_points={
-        "sodre.cli": [
-            "vigilant-spoon=sodre.vigilant_spoon.cli:vigilant_spoon",
+        "zeroae.cli": [
+            "vigilant-spoon=zeroae.vigilant_spoon.cli:vigilant_spoon",
         ],
     },
     # fmt: on
@@ -66,9 +66,9 @@ setup_kwargs = dict(
     long_description=readme,
     long_description_content_type="text/x-rst",
     include_package_data=True,
-    keywords="vigilant_spoon sodre",
-    name="sodre-vigilant_spoon",
-    packages=find_namespace_packages(include=["sodre.*"]),
+    keywords="vigilant_spoon zeroae",
+    name="zeroae-vigilant_spoon",
+    packages=find_namespace_packages(include=["zeroae.*"]),
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,

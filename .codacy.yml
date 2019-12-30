@@ -1,6 +1,6 @@
 ---
 exclude_paths:
-  - 'sodre/vigilant_spoon/_version.py'
+  - 'zeroae/vigilant_spoon/_version.py'
   - 'tests/**/*'
   - 'tests/*'
   - 'benchmarks/**/*'
