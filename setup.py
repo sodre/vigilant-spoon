@@ -11,9 +11,6 @@ with open("README.rst") as readme_file:
 # The requirements section should be kept in sync with the environment.yml file
 requirements = [
     # fmt: off
-    "click>=7.0",
-    "click-plugins",
-    "entrypoints",
     # fmt: on
 ]
 
@@ -54,13 +51,6 @@ setup_kwargs = dict(
         "Programming Language :: Python :: 3.8",
     ],
     description="A Spork",
-    # fmt: off
-    entry_points={
-        "zeroae.cli": [
-            "vigilant-spoon=zeroae.vigilant_spoon.cli:vigilant_spoon",
-        ],
-    },
-    # fmt: on
     install_requires=requirements,
     license="MIT",
     long_description=readme,
