@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use {{ cookiecutter.project_name }} in a project::
+To use sodre's vigilant_spoon in a project::
 
-    import {{ cookiecutter.project_slug }}
+    import vigilant_spoon

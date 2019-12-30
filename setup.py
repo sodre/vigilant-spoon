@@ -11,30 +11,24 @@ with open("README.rst") as readme_file:
 # The requirements section should be kept in sync with the environment.yml file
 requirements = [
     # fmt: off
-    {%- if cookiecutter.command_line_interface|lower == 'click' %}
     "click>=7.0",
     "click-plugins",
     "entrypoints",
-    {%- endif %}
     # fmt: on
 ]
 
 setup_requirements = [
     # fmt: off
-    {%- if cookiecutter.use_pytest == 'y' %}
     "pytest-runner",
     "setuptools_scm",
     "wheel",
-    {%- endif %}
     # fmt: on
 ]
 
 test_requirements = [
     # fmt: off
-    {%- if cookiecutter.use_pytest == 'y' %}
     "pytest>=3",
     "pytest-cov",
-    {%- endif %}
     # fmt: on
 ]
 
@@ -44,57 +38,37 @@ conda_rosetta_stone = {
     # fmt: on
 }
 
-{%- set license_classifiers = {
-    'MIT': 'License :: OSI Approved :: MIT License',
-    'BSD': 'License :: OSI Approved :: BSD License',
-    'ISC': 'License :: OSI Approved :: ISC License (ISCL)',
-    'Apache': 'License :: OSI Approved :: Apache Software License',
-    'GNUv3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-    'Proprietary': 'License :: Other/Proprietary License',
-} %}
-
 setup_kwargs = dict(
-    author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
-    author_email="{{ cookiecutter.email }}",
-    use_scm_version={"write_to": "{{ cookiecutter.project_namespace }}/{{ cookiecutter.project_slug }}/_version.py"},
+    author="Patrick Sodré",
+    author_email="psodre@gmail.com",
+    use_scm_version={"write_to": "sodre/vigilant_spoon/_version.py"},
     python_requires=">=3.6",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
-{%- if cookiecutter.open_source_license in license_classifiers %}
-        "{{ license_classifiers[cookiecutter.open_source_license] }}",
-{%- endif %}
+        "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
-    description="{{ cookiecutter.project_short_description }}",
-    {%- if 'no' not in cookiecutter.command_line_interface|lower %}
+    description="A Spork",
     # fmt: off
     entry_points={
-        {%- if cookiecutter.project_slug == "cli" %}
-        "console_scripts": [
-            "{{ cookiecutter.project_namespace }}
-        {%- else %}
-        "{{cookiecutter.project_namespace}}.cli": [
-            "{{ cookiecutter.project_slug.replace("_","-") }}
-        {%- endif -%}={{cookiecutter.project_namespace}}.{{ cookiecutter.project_slug }}.cli:{{ cookiecutter.project_slug }}",
+        "sodre.cli": [
+            "vigilant-spoon=sodre.vigilant_spoon.cli:vigilant_spoon",
         ],
     },
     # fmt: on
-    {%- endif %}
     install_requires=requirements,
-{%- if cookiecutter.open_source_license in license_classifiers %}
-    license="{{ cookiecutter.open_source_license }}",
-{%- endif %}
+    license="MIT",
     long_description=readme,
     long_description_content_type="text/x-rst",
     include_package_data=True,
-    keywords="{{ cookiecutter.project_slug }} {{ cookiecutter.project_namespace }}",
-    name="{{cookiecutter.project_namespace}}-{{ cookiecutter.project_slug }}",
-    packages=find_namespace_packages(include=["{{ cookiecutter.project_namespace }}.*"]),
+    keywords="vigilant_spoon sodre",
+    name="sodre-vigilant_spoon",
+    packages=find_namespace_packages(include=["sodre.*"]),
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
@@ -103,7 +77,7 @@ setup_kwargs = dict(
         "test": test_requirements
         # fmt: on
     },
-    url="https://github.com/{{ cookiecutter.github_organization}}/{{ cookiecutter.project_repo}}",
+    url="https://github.com/sodre/vigilant-spoon",
     zip_safe=False,
 )
 
@@ -115,7 +89,7 @@ if "CONDA_BUILD_STATE" in os.environ:
         del setup_kwargs["use_scm_version"]
     except ModuleNotFoundError:
         print(
-            "Error: {{ cookiecutter.project_repo }} requires that setuptools_scm be installed with conda-build!"  # noqa: E501
+            "Error: vigilant-spoon requires that setuptools_scm be installed with conda-build!"  # noqa: E501
         )
         raise
     setup_kwargs["conda_rosetta_stone"] = conda_rosetta_stone
