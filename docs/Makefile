@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = sodre/vigilant_spoon
+SPHINXPROJ    = zeroae/vigilant_spoon
 SOURCEDIR     = .
 BUILDDIR      = _build
 
