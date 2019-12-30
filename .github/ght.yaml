@@ -21,7 +21,7 @@ cookiecutter:
   #
   # These were guess based on the repository information
   # You probably want to customize them.
-  project_namespace: "sodre"
+  project_namespace: "edag"
   project_slug: "vigilant_spoon"
   project_name: "sodre's vigilant_spoon"
 
