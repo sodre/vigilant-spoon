@@ -37,12 +37,6 @@ A Spork
 * Documentation: https://vigilant-spoon.readthedocs.io.
 
 
-Features
---------
-
-* TODO
-
-
 -------
 
 This package was created with ght-render_ and the `sodre/ght-pypackage`_ project template.
