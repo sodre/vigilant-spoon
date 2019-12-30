@@ -1,6 +1,6 @@
-name: {{ cookiecutter.project_repo }}-dev
+name: vigilant-spoon-dev
 channels:
-  - {{ cookiecutter.anaconda_organization }}
+  - sodre
   - conda-forge
   - defaults
 dependencies:
