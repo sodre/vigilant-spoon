@@ -61,7 +61,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Download the source distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-sdist
           path: .
@@ -99,7 +99,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Download the source distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-sdist
           path: .
@@ -137,12 +137,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Download the binary distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-bdist-wheel
           path: dist
       - name: Download the test distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: custom-tdist
           path: .
@@ -198,7 +198,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Source Distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-sdist
           path: .
@@ -264,7 +264,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.artifact-name }}
           path: dist
@@ -287,13 +287,13 @@ jobs:
       - upload-to-github
     steps:
       - name: Download source distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-sdist
           path: dist
 
       - name: Download binary distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypa-bdist-wheel
           path: dist
@@ -322,7 +322,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download ${{ matrix.artifact-name }} distribution
-        uses: actions/download-artifact@v1.0.0
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.artifact-name }}
           path: .
